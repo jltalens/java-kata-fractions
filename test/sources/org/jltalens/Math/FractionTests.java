@@ -26,4 +26,13 @@ public class FractionTests {
         assertEquals(-1, new Fraction(-1).add(new Fraction(0)).intValue());
         assertEquals(2, new Fraction(3).add(new Fraction(-1)).intValue());
     }
+
+    @Test
+    public void one_plus_one_with_fractions() throws Exception {
+        Fraction first = new Fraction(1, 1);
+        Fraction second = new Fraction(1, 1);
+        Fraction sum = first.add(second);
+        assertEquals(2, sum.getNumerator());
+        assertEquals(1, sum.getDenominator());
+    }
 }
