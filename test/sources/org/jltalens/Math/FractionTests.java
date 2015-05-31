@@ -35,4 +35,11 @@ public class FractionTests {
         assertEquals(2, sum.getNumerator());
         assertEquals(1, sum.getDenominator());
     }
+
+    @Test
+    public void same_denominator_different_numerators() throws Exception {
+        Fraction sum = new Fraction(1, 1).add(new Fraction(3, 1));
+        assertEquals(4, sum.getNumerator());
+        assertEquals(1, sum.getDenominator());
+    }
 }

@@ -2,12 +2,19 @@ package org.jltalens.Math;
 
 public class Fraction {
     private int intValue;
+    private int numerator;
+    private int denominator;
 
     public Fraction(int intValue) {
         this.intValue = intValue;
+        this.numerator = intValue;
+        this.denominator = 1;
     }
 
     public Fraction(int numerator, int denominator) {
+        this.intValue = numerator;
+        this.numerator = numerator;
+        this.denominator = denominator;
     }
 
     public Fraction add(Fraction that) {
@@ -19,10 +26,10 @@ public class Fraction {
     }
 
     public int getNumerator() {
-        return 2;
+        return numerator;
     }
 
     public int getDenominator() {
-        return 1;
+        return denominator;
     }
 }
