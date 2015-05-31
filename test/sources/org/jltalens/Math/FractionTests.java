@@ -29,9 +29,7 @@ public class FractionTests {
 
     @Test
     public void one_plus_one_with_fractions() throws Exception {
-        Fraction first = new Fraction(1, 1);
-        Fraction second = new Fraction(1, 1);
-        Fraction sum = first.add(second);
+        Fraction sum = new Fraction(1, 1).add(new Fraction(1, 1));
         assertEquals(2, sum.getNumerator());
         assertEquals(1, sum.getDenominator());
     }
