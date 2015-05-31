@@ -14,7 +14,8 @@ public class Fraction {
     }
 
     public Fraction add(Fraction that) {
-        return new Fraction(this.intValue() + that.intValue());
+        return new Fraction((this.numerator * that.denominator) + (that.numerator * this.denominator),
+                this.denominator * that.denominator);
     }
 
     public int intValue() {
