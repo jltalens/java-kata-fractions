@@ -8,7 +8,12 @@ public class Fraction {
     }
 
     public Fraction add(Fraction that) {
-        return new Fraction(that.intValue());
+        if (that.intValue == 0) {
+            return new Fraction(this.intValue());
+        }
+        else {
+            return new Fraction(that.intValue());
+        }
     }
 
     public int intValue() {
