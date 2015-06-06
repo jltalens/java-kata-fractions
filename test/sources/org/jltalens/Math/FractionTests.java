@@ -33,16 +33,14 @@ public class FractionTests {
 
     @Test
     public void one_plus_one_with_fractions() throws Exception {
-        Fraction sum = new Fraction(1, 1).add(new Fraction(1, 1));
-        assertEquals(2, sum.getNumerator());
-        assertEquals(1, sum.getDenominator());
+        assertEquals(2, new Fraction(1, 1).add(new Fraction(1, 1)).getNumerator());
+        assertEquals(1, new Fraction(1, 1).add(new Fraction(1, 1)).getDenominator());
     }
 
     @Test
     public void same_denominator_different_numerators() throws Exception {
-        Fraction sum = new Fraction(1, 1).add(new Fraction(3, 1));
-        assertEquals(4, sum.getNumerator());
-        assertEquals(1, sum.getDenominator());
+        assertEquals(4, new Fraction(1, 1).add(new Fraction(3, 1)).getNumerator());
+        assertEquals(1, new Fraction(1, 1).add(new Fraction(3, 1)).getDenominator());
     }
 
     @Test
@@ -53,8 +51,7 @@ public class FractionTests {
 
     @Test
     public void mixed_implicit_and_explicit_positive_fractions() throws Exception {
-        Fraction sum = new Fraction(1,2).add(new Fraction(1));
-        assertEquals(new Fraction(3,2), sum);
+        assertEquals(new Fraction(3,2), new Fraction(1,2).add(new Fraction(1)));
     }
 
 
