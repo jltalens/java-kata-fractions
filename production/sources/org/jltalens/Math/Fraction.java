@@ -18,18 +18,6 @@ public class Fraction {
                 this.denominator * that.denominator);
     }
 
-    public int intValue() {
-        return getNumerator();
-    }
-
-    public int getNumerator() {
-        return numerator;
-    }
-
-    public int getDenominator() {
-        return denominator;
-    }
-
     @Override
     public boolean equals(Object other) {
         if (this == other) return true;
