@@ -29,4 +29,28 @@ public class Fraction {
     public int getDenominator() {
         return denominator;
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
+
+        Fraction fraction = (Fraction) other;
+
+        if (numerator != fraction.numerator) return false;
+        return denominator == fraction.denominator;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = numerator;
+        result = 31 * result + denominator;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%d/%d", numerator, denominator);
+    }
 }
