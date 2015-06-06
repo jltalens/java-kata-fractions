@@ -38,8 +38,7 @@ public class FractionTests {
 
     @Test
     public void same_denominator_different_numerators() throws Exception {
-        assertEquals(4, new Fraction(1, 1).add(new Fraction(3, 1)).getNumerator());
-        assertEquals(1, new Fraction(1, 1).add(new Fraction(3, 1)).getDenominator());
+        assertEquals(new Fraction(4,1), new Fraction(1, 1).add(new Fraction(3, 1)));
     }
 
     @Test
