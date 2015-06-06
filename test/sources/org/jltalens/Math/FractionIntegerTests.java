@@ -1,34 +1,40 @@
 package org.jltalens.Math;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 
+@RunWith(value = Parameterized.class)
 public class FractionIntegerTests {
-    @Test
-    public void zero_plus_zero_equals_zero() throws Exception {
-        checkTwoIntegerFractions(0,0,0);
+
+    private int expected;
+    private int first;
+    private int second;
+
+    public FractionIntegerTests(int expected, int first, int second) {
+        this.expected = expected;
+        this.first = first;
+        this.second = second;
+    }
+
+    @Parameterized.Parameters(name = "{index}: add({1} + {2} = {0}")
+    public static Iterable<Object[]> data() {
+        return Arrays.asList(new Object[][] {
+                {0, 0, 0},
+                {1, 0, 1},
+                {5, 5, 0},
+                {4, 1, 3},
+                {-1, -1, 0},
+                {2, 3, -1}
+        });
     }
 
     @Test
-    public void non_zero_plus_zero_equals_non_zero() throws Exception {
-        checkTwoIntegerFractions(1,0,1);
-        checkTwoIntegerFractions(5,5,0);
-    }
-
-    @Test
-    public void non_zero_plus_non_zero() throws Exception {
-        checkTwoIntegerFractions(4, 1, 3);
-    }
-
-    private void checkTwoIntegerFractions(int expected, int first, int second) {
+    public void checkTwoIntegerFractions() {
         assertEquals(new Fraction(expected), new Fraction(first).add(new Fraction(second)));
     }
-
-    @Test
-    public void negative_numbers() throws Exception {
-        checkTwoIntegerFractions(-1,-1,0);
-        checkTwoIntegerFractions(2,3,-1);
-    }
-
 }
