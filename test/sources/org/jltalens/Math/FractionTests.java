@@ -55,8 +55,8 @@ public class FractionTests {
     @Test
     public void mixed_implicit_and_explicit_positive_fractions() throws Exception {
         Fraction sum = new Fraction(1,2).add(new Fraction(1));
-        assertEquals(3,sum.getNumerator());
-        assertEquals(2,sum.getDenominator());
-
+        assertEquals(new Fraction(3,2), sum);
     }
+
+
 }

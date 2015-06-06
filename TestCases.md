@@ -14,5 +14,6 @@
 * 1/4 + 1/3     = 5/12
 * -2/3 + 4/-2   = -(8/3)
 
+- Reduce
 - Reduce in equals
 - Equals / HashCode
