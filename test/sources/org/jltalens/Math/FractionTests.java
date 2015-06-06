@@ -43,13 +43,8 @@ public class FractionTests {
 
     @Test
     public void same_denominator_negative_and_positive_numerator() throws Exception {
-        Fraction sum = new Fraction(-1, 1).add(new Fraction(-3, 1));
-        assertEquals(-4, sum.getNumerator());
-        assertEquals(1, sum.getDenominator());
-
-        sum = new Fraction(-1, 1).add(new Fraction(3, 1));
-        assertEquals(2, sum.getNumerator());
-        assertEquals(1, sum.getDenominator());
+        assertEquals(new Fraction(-4,1), new Fraction(-1, 1).add(new Fraction(-3, 1)));
+        assertEquals(new Fraction(2,1), new Fraction(-1,1).add(new Fraction(3,1)));
     }
 
     @Test
