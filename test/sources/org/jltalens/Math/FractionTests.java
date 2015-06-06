@@ -33,8 +33,7 @@ public class FractionTests {
 
     @Test
     public void one_plus_one_with_fractions() throws Exception {
-        assertEquals(2, new Fraction(1, 1).add(new Fraction(1, 1)).getNumerator());
-        assertEquals(1, new Fraction(1, 1).add(new Fraction(1, 1)).getDenominator());
+        assertEquals(new Fraction(2,1), new Fraction(1,1).add(new Fraction(1,1)));
     }
 
     @Test
