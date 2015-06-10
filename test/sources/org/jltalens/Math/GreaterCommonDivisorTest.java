@@ -22,16 +22,26 @@ public class GreaterCommonDivisorTest {
         this.expected = expected;
     }
 
-    @Parameterized.Parameters(name = "{index}: gcd({0} + {1} = {2}")
+    @Parameterized.Parameters(name = "{index}: gdc({0}, {1}) = {2}")
     public static Iterable<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {1, 1, 1}
+                , {2, 2, 2}
+                , {-1, -1, -1}
+                , {-1, 1, 1}
+                , {1, -1, -1}
+                , {2, 3, 1}
+                , {4, 7, 1}
+                , {-2, -3, -1}
+                , {3, 9, 3}
+                , {5, 30, 5}
+                , {49, 350, 7}
         });
     }
 
 
     @Test
-    public void one_and_one_should_be_one() throws Exception {
+    public void gcd_examples() throws Exception {
         assertEquals(expected, gcd(a, b));
 
     }
