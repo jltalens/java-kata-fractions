@@ -27,12 +27,12 @@ public class GreaterCommonDivisorTest {
         return Arrays.asList(new Object[][]{
                 {1, 1, 1}
                 , {2, 2, 2}
-                , {-1, -1, -1}
+                , {-1, -1, 1}
                 , {-1, 1, 1}
-                , {1, -1, -1}
+                , {1, -1, 1}
                 , {2, 3, 1}
                 , {4, 7, 1}
-                , {-2, -3, -1}
+                , {-2, -3, 1}
                 , {3, 9, 3}
                 , {5, 30, 5}
                 , {49, 350, 7}
@@ -52,6 +52,6 @@ public class GreaterCommonDivisorTest {
             b = a % t;
             a = t;
         }
-        return a;
+        return Math.abs(a);
     }
 }
