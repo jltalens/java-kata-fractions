@@ -9,13 +9,13 @@ import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(value = Parameterized.class)
-public class FractionIntegerTests {
+public class FractionIntegerTest {
 
     private int expected;
     private int first;
     private int second;
 
-    public FractionIntegerTests(int expected, int first, int second) {
+    public FractionIntegerTest(int expected, int first, int second) {
         this.expected = expected;
         this.first = first;
         this.second = second;

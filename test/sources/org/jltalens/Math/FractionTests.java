@@ -28,5 +28,9 @@ public class FractionTests {
     }
 
 
+    @Test
+    public void different_denominators() throws Exception {
+        assertEquals(new Fraction(5,6), new Fraction(1,2).add(new Fraction(1,3)));
 
+    }
 }

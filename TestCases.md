@@ -17,3 +17,4 @@
 - Reduce
 - Reduce in equals
 - Equals / HashCode
+- gcd
