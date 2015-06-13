@@ -36,4 +36,10 @@ public class FractionEqualsTest {
         assertNotEquals(new Fraction(3), new Fraction(2));
 
     }
+
+    @Test
+    public void with_negative_numbers() throws Exception {
+        assertEquals(new Fraction(1,2), new Fraction(-1,-2));
+
+    }
 }
