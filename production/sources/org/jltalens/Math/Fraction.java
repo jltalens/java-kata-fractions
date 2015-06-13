@@ -1,5 +1,7 @@
 package org.jltalens.Math;
 
+import static org.jltalens.Math.NumberTheory.gcd;
+
 public class Fraction {
     private int numerator;
     private int denominator;
@@ -41,12 +43,4 @@ public class Fraction {
         return String.format("%d/%d", numerator, denominator);
     }
 
-    private int gcd(int a, int b) {
-        while (b != 0) {
-            int t = b;
-            b = a % t;
-            a = t;
-        }
-        return Math.abs(a);
-    }
 }
