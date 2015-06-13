@@ -12,6 +12,7 @@ public class Fraction {
 
     public Fraction(int numerator, int denominator) {
         int signOfDenominator = denominator < 0 ? -1 : 1;
+        // gcd never returns 0
         int gdc = gcd(numerator, denominator) * signOfDenominator;
         this.numerator = numerator / gdc;
         this.denominator = denominator / gdc;

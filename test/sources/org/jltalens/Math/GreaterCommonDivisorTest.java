@@ -36,6 +36,9 @@ public class GreaterCommonDivisorTest {
                 , {3, 9, 3}
                 , {5, 30, 5}
                 , {49, 350, 7}
+                , {1, 0, 1}
+                , {0, 0, 0}
+                , {0, 5, 5}
         });
     }
 
