@@ -9,14 +9,9 @@ public class Fraction {
     }
 
     public Fraction(int numerator, int denominator) {
-        if (numerator == 6 && denominator == 8) {
-            this.numerator = 3;
-            this.denominator = 4;
-        }
-        else {
-            this.numerator = numerator;
-            this.denominator = denominator;
-        }
+        int gdc = gcd(numerator, denominator);
+        this.numerator = numerator / gdc;
+        this.denominator = denominator / gdc;
     }
 
     public Fraction add(Fraction that) {
@@ -44,5 +39,14 @@ public class Fraction {
     @Override
     public String toString() {
         return String.format("%d/%d", numerator, denominator);
+    }
+
+    private int gcd(int a, int b) {
+        while (b != 0) {
+            int t = b;
+            b = a % t;
+            a = t;
+        }
+        return Math.abs(a);
     }
 }
