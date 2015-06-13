@@ -65,4 +65,10 @@ public class FractionTests {
     public void negative_signs_everywhere() throws Exception {
         assertEquals(new Fraction(1, 2), new Fraction(1, -4).add(new Fraction(-3, -4)));
     }
+
+    @Test
+    public void zero_in_denominator() throws Exception {
+        assertEquals(new Fraction(1, 0), new Fraction(1, 0).add(new Fraction(-3, -4)));
+        assertEquals(new Fraction(5, 0), new Fraction(5, 0).add(new Fraction(1333, 123123)));
+    }
 }

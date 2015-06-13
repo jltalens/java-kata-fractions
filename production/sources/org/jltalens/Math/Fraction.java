@@ -2,7 +2,7 @@ package org.jltalens.Math;
 
 import static org.jltalens.Math.NumberTheory.gcd;
 
-public class Fraction {
+public class Fraction{
     private int numerator;
     private int denominator;
 
